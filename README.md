@@ -1,6 +1,6 @@
 # Description
 
-C string manipulation functions, similar to those provided in string.h
+C string manipulation library, similar to string.h
 
 The following functions are implemented:
 
@@ -13,39 +13,54 @@ The following functions are implemented:
 * ms_ncompare(string1, string2, N): compare the first N characters of string1 and string2
 * ms_search(string, substring): search substring in string
 
-## Compile
-
-The program is written in C.
+## Implementation
 
 Two versions are provided: One that treats strings as arrays and one
-that treats strings as pointers. Both versions should behave the same.
+that treats strings as pointers. Both versions return the same results but the pointer
+version should run faster.
 
-To compile, use the provided Makefile:
+## Compile
+
+Use the provided Makefile:
+
+### Building the library
 
 * Pointer version:
 
 ```bash
-make mystring_ptrs
+make mystring_ptrs.o
 ```
 
 * Array version:
 
 ```bash
-make mystring_ars
+make mystring_ars.o
 ```
 
-## Typical usage
+### Building the test files
 
-To run the tests in [main.c](main.c), execute either
+Using the library is demonstrated in [main.c](main.c)
+
+* Build the tests for the pointer version:
 
 ```bash
-./mystring_ars
+make mystring_ptrs
 ```
 
-or
+and run with:
 
 ```bash
 ./mystring_ptrs
 ```
 
-depending on the compiled version.
+* Build the tests for the array version:
+
+```bash
+make mystring_ars
+```
+
+and run with:
+
+```bash
+./mystring_ars
+```
