@@ -1,4 +1,4 @@
-# Description
+# C strings
 
 C string manipulation library, similar to string.h
 
@@ -21,45 +21,41 @@ version should run faster.
 
 ## Compile
 
-Use the provided Makefile:
-
-### Building the library
-
-* Pointer version:
+* Build the library that uses pointers:
 
 ```bash
 make mystring_ptrs.o
 ```
 
-* Array version:
+* Build the library that uses arrays:
 
 ```bash
 make mystring_ars.o
 ```
 
-### Building the test files
+## Tests
 
 Using the library is demonstrated in [main.c](main.c)
 
-* Build the tests for the pointer version:
+* Build the tests that use pointer version:
 
 ```bash
 make mystring_ptrs
 ```
 
-and run with:
+Run:
 
 ```bash
 ./mystring_ptrs
 ```
 
-* Build the tests for the array version:
+* Build the tests that uses the array version:
 
 ```bash
 make mystring_ars
 ```
 
-and run with:
+Run:
 
 ```bash
 ./mystring_ars
