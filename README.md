@@ -35,7 +35,7 @@ make mystring_ars.o
 
 ## Tests
 
-Using the library is demonstrated in [main.c](main.c)
+Using the library is demonstrated in [main.c](src/main.c)
 
 * Build the tests that use pointer version:
 
