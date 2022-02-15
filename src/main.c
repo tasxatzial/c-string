@@ -18,7 +18,7 @@ void test_ms_copy() {
     a = ms_copy(s1, s3);
     b = strcpy(s2, s3); /* string.h */
     if (strcmp(a, b)) {
-        printf("%s %s\n", a, b);
+        printf("ms_copy error: %s %s\n", a, b);
     }
 }
 
@@ -29,19 +29,19 @@ void test_ms_length() {
     int s1_len2 = strlen(s1); /* string.h */
 
     if (s1_len1 != s1_len2) {
-        printf("%d %d\n", s1_len1, s1_len2);
+        printf("ms_length error: %d %d\n", s1_len1, s1_len2);
     }
 }
 
 void test_ms_compare() {
     char s1[] = "this";
-    char s2[] = "that";
+    char s2[] = "this";
 
     int a = ms_compare(s1, s2);
     int b = strcmp(s1, s2); /* string.h */
 
     if (a != b) {
-        printf("%d %d\n", a, b);
+        printf("ms_compare error: %d %d\n", a, b);
     }
 }
 
@@ -54,7 +54,7 @@ void test_ms_concat() {
     char *b = strcat(s3, s1); /* string.h */
 
     if (strcmp(a, b)) {
-        printf("%s %s\n", a, b);
+        printf("ms_concat error: %s %s\n", a, b);
     }
 }
 
@@ -66,7 +66,7 @@ void test_ms_search() {
     char *b = strstr(s1, s2); /* string.h */
 
     if (strcmp(a, b)) {
-        printf("%s %s\n",a, b);
+        printf("ms_search error: %s %s\n",a, b);
     }
 }
 
@@ -79,19 +79,19 @@ void test_ms_ncopy() {
     char *b = strncpy(s3, s1, 2); /* string.h */
 
     if (strcmp(a, b)) {
-        printf("%s %s\n", a, b);
+        printf("ms_ncopy error: %s %s\n", a, b);
     }
 }
 
 void test_ms_ncompare() {
     char s1[] = "this";
-    char s2[] = "that";
+    char s2[] = "this";
 
     int a = ms_ncompare(s1, s2, 3);
     int b = strncmp(s1, s2, 3); /* string.h */
 
     if (a != b) {
-        printf("%d %d\n", a, b);
+        printf("ms_ncompare error: %d %d\n", a, b);
     }
 }
 
@@ -104,7 +104,7 @@ void test_ms_nconcat() {
     char *b = strncat(s3, s1, 4); /* string.h */
 
     if (strcmp(a, b)) {
-        printf("%s %s\n", a, b);
+        printf("ms_nconcat error: %s %s\n", a, b);
     }
 }
 
