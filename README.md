@@ -15,9 +15,11 @@ The following functions are implemented:
 
 ## Implementation
 
-Two versions are provided: One that treats strings as arrays and one
-that treats strings as pointers. Both versions return the same results but the pointer
-version should run faster.
+Two versions are provided, one that treats strings as arrays and one that treats strings as pointers. Both versions return the same results but the pointer version should run faster.
+
+## Profiling
+
+The program has been tested for memory leaks with [AddressSanitizer](https://github.com/google/sanitizers/wiki/AddressSanitizer).
 
 ## Compile
 
