@@ -37,28 +37,30 @@ make mystring_ars.o
 
 ## Tests
 
-Using the library is demonstrated in [main.c](src/main.c)
+Using the library is demonstrated in [main.c](src/main.c).
 
 * Build the tests that use pointer version:
 
 ```bash
-make mystring_ptrs
+make mystring_ptrs_demo
 ```
 
 Run:
 
 ```bash
-./mystring_ptrs
+./mystring_ptrs_demo
 ```
 
 * Build the tests that uses the array version:
 
 ```bash
-make mystring_ars
+make mystring_ars_demo
 ```
 
 Run:
 
 ```bash
-./mystring_ars
+./mystring_ars_demo
 ```
+
+In both cases there should be no output if the results of the library functions match the results of the functions declared in string.h
