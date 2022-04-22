@@ -17,29 +17,25 @@ The following functions are implemented:
 
 Two versions are provided, one that treats strings as arrays and one that treats strings as pointers. Both versions return the same results but the pointer version should run faster.
 
-## Profiling
-
-The program has been tested for memory leaks with [AddressSanitizer](https://github.com/google/sanitizers/wiki/AddressSanitizer).
-
 ## Compile
 
-* Build the library that uses pointers:
+* Build the library that uses pointers (functions declared in mystring.h):
 
 ```bash
 make mystring_ptrs.o
 ```
 
-* Build the library that uses arrays:
+* Build the library that uses arrays (functions declared in mystring.h):
 
 ```bash
 make mystring_ars.o
 ```
 
-## Tests
+## Demo
 
 Using the library is demonstrated in [main.c](src/main.c).
 
-* Build the tests that use pointer version:
+* Build the demo that uses pointer version:
 
 ```bash
 make mystring_ptrs_demo
@@ -51,7 +47,7 @@ Run:
 ./mystring_ptrs_demo
 ```
 
-* Build the tests that uses the array version:
+* Build the demo that uses the array version:
 
 ```bash
 make mystring_ars_demo
@@ -64,3 +60,7 @@ Run:
 ```
 
 In both cases there should be no output if the results of the library functions match the results of the functions declared in string.h
+
+## Profiling
+
+'mystring_ptrs_demo' and 'mystring_ars_demo' have been tested for memory leaks with [AddressSanitizer](https://github.com/google/sanitizers/wiki/AddressSanitizer).
